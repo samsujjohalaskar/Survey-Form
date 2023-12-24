@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Customer Survey Form</title>
+</head>
+<body>
+    <div class="survey-form">
+        <h2>Customer Survey Form</h2>
+        <form id="surveyForm">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" required>
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="Male"> Male
+                <input type="radio" id="female" name="gender" value="Female"> Female
+                <input type="radio" id="other" name="gender" value="Other"> Other.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option selected value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Other">Other</option>
+                </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="profession">Profession:</label>
+                <input type="text" id="profession" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="mobileNumber">Mobile Number:</label>
+                <input type="tel" id="mobileNumber" required>
+            </div><br>
+            <div class="form-group">
+                <label>Is this your first time using our products & services?</label>
+                <input type="radio" id="firstTimeYes" name="firstTime" value="Yes"> Yes
+                <input type="radio" id="firstTimeNo" name="firstTime" value="No"> No
+            </div>
+            <div class="form-group">
+                <label>Would you suggest our products & services to your friends and colleagues?</label>
+                <input type="radio" id="suggestYes" name="suggest" value="Yes"> Yes
+                <input type="radio" id="suggestNo" name="suggest" value="No"> No
+            </div>
+
+            <div class="form-group">
+                <label>How satisfied are you with our company overall?</label>
+                <input type="radio" id="satisfied" name="satisfaction" value="Satisfied"> Satisfied
+                <input type="radio" id="unsatisfied" name="satisfaction" value="Unsatisfied"> Unsatisfied
+                <input type="radio" id="partial" name="satisfaction" value="Partial"> Partially Satisfied
+            </div>
+            <div class="form-group">
+                <span for="suggestions">Do you have any suggestions to improve our service?</span><br><br>
+                <textarea id="suggestions" rows="4" cols="50"></textarea>
+            </div>
+            <div class="form-buttons">
+                <button type="button" onclick="submitForm()">SUBMIT</button>
+                <button type="reset">RESET</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
